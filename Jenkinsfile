@@ -11,10 +11,10 @@ pipeline {
 
     post {
         success {
-            slackSend channel: '#johncena', message: "✅ Job '${env.JOB_NAME} [#${env.BUILD_NUMBER}]' succeeded!"
+            slackSend channel: '#johncena', message: "✅ Jobsucceeded!"
         }
         failure {
-            slackSend channel: '#johncena', message: "❌ Job '${env.JOB_NAME} [#${env.BUILD_NUMBER}]' failed!"
+            slackSend channel: '#johncena', message: "❌ Jobfailed!"
         }
     }
 }
